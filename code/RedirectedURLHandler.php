@@ -88,6 +88,10 @@ class RedirectedURLHandler extends Extension {
 					}
 				}
 
+                if(!$potential->FromQuerystring && $getVars){
+                    $allVarsMatch = false;
+                }
+
 				if($allVarsMatch) {
 					$matched = $potential;
 					break;
